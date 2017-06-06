@@ -1,7 +1,7 @@
 # fetch_imagenet
 fetch imagenet from list to build own train data 
 
-USE curl##
+##USE curl
 ```bash
 $ nohup cat filelist | xargs -n4 curl -L &>output &`
 ```
