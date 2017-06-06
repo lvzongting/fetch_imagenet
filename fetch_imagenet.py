@@ -44,7 +44,7 @@ http://server/file2.iso
 then download images using aria2 
 $aria2c -c -i download.lst -j 10 -t 10
 monitor
-$ watch "for D in *; do echo $D; find $D -type f| wc -l; done"
+$ watch 'for D in *; do echo $D; find $D -type f| wc -l; done'
 '''
 
 for filename in glob.glob(label_path + '*.lst'):
