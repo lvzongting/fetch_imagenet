@@ -46,19 +46,21 @@ http://server/file2.iso
   out=file2.img
 ```
 ## dir structure
--- label
-  |-- label.lst
-  |-- n02114548.lst
-  |-- n02138441.lst
-  |-- n02174001.lst
-  |-- n02950826.lst
-  |-- n02971356.lst
--- image
-  |-- n02114548
-    |--00000001.jpg
+```
+-- label    
+  |-- label.lst    
+  |-- n02114548.lst    
+  |-- n02138441.lst    
+  |-- n02174001.lst    
+  |-- n02950826.lst   
+  |-- n02971356.lst    
+-- image    
+  |-- n02114548   
+    |--00000001.jpg   
     |--00000002.jpg
     |--00000003.jpg
   |-- n02138441
     |--00000001.jpg
     |--00000002.jpg
     |--00000003.jpg
+```
