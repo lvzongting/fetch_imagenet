@@ -71,5 +71,7 @@ http://server/file2.iso
 ## monitor the download process
 ```bash
 $ watch 'for D in *; do echo $D; find $D -type f| wc -l; done'
+O.R.
+$ watch 'for D in *; do printf $D; printf "   ";find $D -type f| wc -l; done'
 ```
 ![](https://img.vim-cn.com/b8/a45430b844b90806c92490f78d8504a47cdf33.png)
