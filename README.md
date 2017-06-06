@@ -1,15 +1,20 @@
 # fetch_imagenet
 fetch imagenet from list to build own train data 
 
+label list => url list => download list
 
+get url list
+```
+http://www.image-net.org/api/text/imagenet.synset.geturls.getmapping?wnid=[wnid]
+```
 
 ## USE curl
 Fetch command
 ```bash
-$ nohup cat filelist | xargs -n4 curl -L &>output &`
+$ nohup cat downloadlist | xargs -n4 curl -L &>output &`
 ```
 
-File structure
+downloadlist File structure
 ```
 http:/www.somedomain.com/my/file/number-one.txt
 --create-dirs
@@ -17,12 +22,12 @@ http:/www.somedomain.com/my/file/number-one.txt
 a-directory/hierarchy/number-one.txt
 ```
 
-## USE aria
+## USE aria2
 ```bash
 $ aria2c -i filelist
 ```
 
-File structure
+downloadlist File structure
 ```
 http://server/file1.iso
   dir=/iso_images
