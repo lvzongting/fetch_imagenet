@@ -45,6 +45,12 @@ http://server/file2.iso
   dir=/iso_images
   out=file2.img
 ```
+
+## monitor the download process
+```bash
+$ watch 'for D in *; do echo $D; find $D -type f| wc -l; done'
+```
+
 ## dir structure
 ```
 -- label.lst
