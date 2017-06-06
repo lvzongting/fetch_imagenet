@@ -47,6 +47,8 @@ http://server/file2.iso
 ```
 ## dir structure
 ```
+-- label.lst
+-- download.lst
 -- label    
   |-- label.lst    
   |-- n02114548.lst    
