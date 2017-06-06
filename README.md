@@ -33,7 +33,7 @@ a-directory/hierarchy/number-one.txt
 
 ## USE aria2
 ```bash
-$ aria2c -i download.lst
+$ aria2c -c -i download.lst -j 10 -t 5
 ```
 
 download.lst File structure
