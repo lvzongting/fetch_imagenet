@@ -24,7 +24,7 @@ a-directory/hierarchy/number-one.txt
 
 ## USE aria2
 ```bash
-$ aria2c -i filelist
+$ aria2c -i downloadlist
 ```
 
 downloadlist File structure
