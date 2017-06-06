@@ -3,6 +3,15 @@ fetch imagenet from list to build own train data
 
 label list => url list => download list
 
+label.lst
+```
+n02114548
+n02138441
+n02174001
+n02950826
+n02971356
+```
+
 get url list
 ```
 http://www.image-net.org/api/text/imagenet.synset.geturls.getmapping?wnid=[wnid]
@@ -11,10 +20,10 @@ http://www.image-net.org/api/text/imagenet.synset.geturls.getmapping?wnid=[wnid]
 ## USE curl
 Fetch command
 ```bash
-$ nohup cat downloadlist | xargs -n4 curl -L &>output &`
+$ nohup cat download.lst | xargs -n4 curl -L &>output &`
 ```
 
-downloadlist File structure
+download.lst File structure
 ```
 http:/www.somedomain.com/my/file/number-one.txt
 --create-dirs
@@ -24,10 +33,10 @@ a-directory/hierarchy/number-one.txt
 
 ## USE aria2
 ```bash
-$ aria2c -i downloadlist
+$ aria2c -i download.lst
 ```
 
-downloadlist File structure
+download.lst File structure
 ```
 http://server/file1.iso
   dir=/iso_images
@@ -36,3 +45,20 @@ http://server/file2.iso
   dir=/iso_images
   out=file2.img
 ```
+## dir structure
+-- label
+  |-- label.lst
+  |-- n02114548.lst
+  |-- n02138441.lst
+  |-- n02174001.lst
+  |-- n02950826.lst
+  |-- n02971356.lst
+-- image
+  |-- n02114548
+    |--00000001.jpg
+    |--00000002.jpg
+    |--00000003.jpg
+  |-- n02138441
+    |--00000001.jpg
+    |--00000002.jpg
+    |--00000003.jpg
