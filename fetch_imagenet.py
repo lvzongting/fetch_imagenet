@@ -28,7 +28,7 @@ for line in label_file.readlines():
         continue
     time.sleep(1.5)
 
-num_class    = 1000
+num_class    = 9999
 len_name      = len(str(num_class))
 image_path    = 'image/'
 d_file        = open('download.lst','w')
@@ -47,9 +47,15 @@ monitor
 $ watch 'for D in *; do echo $D; find $D -type f| wc -l; done'
 '''
 
-for filename in glob.glob(label_path + '*.lst'):
+label_file = open('label.lst')
+for line in label_file.readlines():
+    line = line[:-1]
+    filename = label_path+line+'.lst'
     flag = 1
-    url_file = open(filename)   
+    try:
+        url_file = open(filename)   
+    except:
+        continue
     for line in url_file.readlines():
         try:
             line = line.split(' ')[1][:-1]
