@@ -67,6 +67,10 @@ http://server/file2.iso
     |--00000002.jpg
     |--00000003.jpg
 ```
+## delete all images not jpeg
+```bash
+$ for D in *; do echo $D; (cd $D && file * --mime-type |grep -v jpeg |cut -d ':' -f 1|xargs rm); done
+```
 
 ## monitor the download process
 ```bash
